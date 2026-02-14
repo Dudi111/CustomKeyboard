@@ -1,0 +1,20 @@
+apply plugin: "org.sonarqube"
+
+/*Execute this method for upload the result of Unit and UI test cases
+    Add the below properties to get sonarqube coverage report
+    property "sonar.projectName",""
+    property "sonar.projectKey",""
+    property "sonar.host.url" , ""
+    property "sonar.login", ""
+ */
+sonarqube {
+    properties {
+        property "sonar.projectVersion","$libVersion"
+        property "sonar.java.coveragePlugin", "jacoco"
+        property "sonar.junit.reportPaths", "${layout.getProjectDirectory()}/KeyboardLibrary/build/test-results/testDebugUnitTest/, ${layout.getProjectDirectory()}/KeyboardLibrary/build/outputs/androidTest-results/connected/"
+        property "sonar.coverage.jacoco.xmlReportPaths", "${layout.getProjectDirectory()}/KeyboardLibrary/build/reports/jacoco/jacocoTestReport/*"
+        property "sonar.coverage.exclusions", "**/AlphabetKeyboard*.*,**/AlphanumericKeyboard*.*,**/KeyboardView*.*,**/KeyButton*.*,**/KeyView*.*,**/NumericKeyboardView*.*,**/ChatKeyboardKey*.*,**/ChatKeyboardKeyView*.*,**/ChatKeyboard*.*"
+    }
+}
+
+
