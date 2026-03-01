@@ -85,26 +85,52 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("library") {
-            groupId = "dude.keyboard"
-            artifactId = project.name
-            version = libVersion
-            artifact("${layout.buildDirectory.get()}/outputs/aar/${project.name}-release.aar")
-            pom {
-                withXml {
-                    val dependenciesNode = asNode().appendNode("dependencies")
-                    configurations.implementation.get().incoming.dependencies.forEach {
-                        if (it.group != null && it.version != null) {
-                            val dependencyNode = dependenciesNode.appendNode("dependency")
-                            dependencyNode.appendNode("groupId", it.group)
-                            dependencyNode.appendNode("artifactId", it.name)
-                            dependencyNode.appendNode("version", it.version)
-                        }
-                    }
+//publishing {
+//    publications {
+//        create<MavenPublication>("release") {
+//            from(components["release"])
+//            groupId = "dude.keyboard"
+//            artifactId = project.name
+//            version = libVersion
+//            artifact("${layout.buildDirectory.get()}/outputs/aar/${project.name}-release.aar")
+//            pom {
+//                withXml {
+//                    val dependenciesNode = asNode().appendNode("dependencies")
+//                    configurations.implementation.get().incoming.dependencies.forEach {
+//                        if (it.group != null && it.version != null) {
+//                            val dependencyNode = dependenciesNode.appendNode("dependency")
+//                            dependencyNode.appendNode("groupId", it.group)
+//                            dependencyNode.appendNode("artifactId", it.name)
+//                            dependencyNode.appendNode("version", it.version)
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+
+                from(components["release"])
+
+                groupId = "dude.keyboard"
+                artifactId = project.name
+                version = libVersion
+
+                pom {
+                    name.set(project.name)
+                    description.set("Custom keyboard Library")
+                    packaging = "aar"
                 }
             }
+        }
+
+        repositories {
+            mavenLocal()
         }
     }
 }
