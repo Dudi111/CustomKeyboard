@@ -19,7 +19,7 @@ To use the Keyboard library in Android project, follow below steps:
 Add the dependency to a module:
 
 ```groovy
-   api("noot.cdt:keyboardLibrary:1.0.0")
+   api("dude.keyboard:keyboardLibrary:1.0.0")
 ```
 
 ### 2. For use different types of keyboard follow below steps
