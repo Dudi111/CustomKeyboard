@@ -76,8 +76,6 @@ dependencies {
     debugImplementation(libs.androidx.tooling)
     debugImplementation(libs.androidx.test.manifest)
     debugImplementation (libs.androidx.core)
-    implementation(libs.sdp.android)
-    implementation(libs.ssp.android)
 
     // Test rules and transitive dependencies
     androidTestImplementation(libs.androidx.test.junit4)

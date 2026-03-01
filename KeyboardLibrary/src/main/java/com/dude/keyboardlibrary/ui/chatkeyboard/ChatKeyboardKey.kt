@@ -9,14 +9,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.vectorResource
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.dude.keyboardlibrary.data.Generated
 import com.dude.keyboardlibrary.data.model.*
 import com.dude.keyboardlibrary.ui.theme.*
-import com.intuit.sdp.R.dimen
 
 /**
  * ChatKeyboardKey : This method is used for create ui of chat keyboard key bases on condition
@@ -39,7 +35,7 @@ internal fun ChatKeyboardKey(
         onLongClick = { onLongPress(keyboardKey) },
         onClick = { onClick(keyboardKey) },
         enabled = true,
-        height = dimensionResource(dimen._42sdp)
+        height = dimen_55dp
     )
     when (keyboardKey) {
         is UtilityKey.Enter -> {
@@ -48,12 +44,12 @@ internal fun ChatKeyboardKey(
                 contentColor = Color.White
             )
 
-            buttonParams.width = dimensionResource(dimen._68sdp)
+            buttonParams.width = dimen_88dp
             ChatKeyboardKeyView(
                 keyboardKey = keyboardKey,
                 color = colors,
-                shapes = RoundedCornerShape(dimensionResource(dimen._15sdp)),
-                iconSize = dimensionResource(dimen._15sdp),
+                shapes = RoundedCornerShape(dimen_20dp),
+                iconSize = dimen_20dp,
                 buttonParams = buttonParams
             )
         }
@@ -63,11 +59,11 @@ internal fun ChatKeyboardKey(
                 containerColor = icon_key_background_color,
                 contentColor = action_key_background_color
             )
-            buttonParams.width = dimensionResource(dimen._40sdp)
+            buttonParams.width = dimen_52dp
             buttonParams.contentPadding = PaddingValues(
-                bottom = dimensionResource(dimen._9sdp),
-                start = 2.dp,
-                end = dimensionResource(dimen._6sdp)
+                bottom = dimen_12dp,
+                start =content_padding_value,
+                end = dimen_8dp
             )
             KeyButtonLongClick(
                 colors = colors,
@@ -91,18 +87,18 @@ internal fun ChatKeyboardKey(
             )
             if (isNumeric) {
                 buttonParams.contentPadding = PaddingValues(
-                    start = dimensionResource(dimen._11sdp),
-                    bottom = dimensionResource(dimen._9sdp),
+                    start = dimen_14dp,
+                    bottom = dimen_12dp,
                     end = content_padding_value
                 )
                 buttonParams.modifier = modifier
             } else {
-                buttonParams.width = dimensionResource(dimen._41sdp)
+                buttonParams.width = dimen_53dp
             }
             ChatKeyboardKeyView(
                 keyboardKey = keyboardKey,
                 color = colors,
-                iconSize = dimensionResource(dimen._15sdp),
+                iconSize = dimen_20dp,
                 buttonParams = buttonParams
             )
         }
@@ -115,7 +111,7 @@ internal fun ChatKeyboardKey(
             buttonParams.modifier = modifier
             ChatKeyboardKeyView(
                 keyboardKey = keyboardKey,
-                textSize = dimensionResource(com.intuit.ssp.R.dimen._12ssp).value.sp,
+                textSize = dimen_16sp,
                 color = colors,
                 buttonParams = buttonParams
             )
@@ -128,13 +124,13 @@ internal fun ChatKeyboardKey(
             )
             buttonParams.modifier = modifier
             buttonParams.contentPadding = PaddingValues(
-                end = dimensionResource(dimen._11sdp),
+                end = dimen_14dp,
                 start = content_padding_value,
-                bottom = dimensionResource(dimen._9sdp)
+                bottom = dimen_12dp
             )
             ChatKeyboardKeyView(
                 keyboardKey = keyboardKey,
-                textSize = dimensionResource(com.intuit.ssp.R.dimen._19ssp).value.sp,
+                textSize = dimen_25sp,
                 color = colors,
                 buttonParams = buttonParams
             )
@@ -145,10 +141,10 @@ internal fun ChatKeyboardKey(
                 containerColor = text_key_background_color,
                 contentColor = Color.Black
             )
-            buttonParams.width = dimensionResource(dimen._40sdp)
+            buttonParams.width = dimen_52dp
             ChatKeyboardKeyView(
                 keyboardKey = keyboardKey,
-                textSize = dimensionResource(com.intuit.ssp.R.dimen._19ssp).value.sp,
+                textSize = dimen_25sp,
                 color = colors,
                 buttonParams = buttonParams
             )
@@ -159,10 +155,10 @@ internal fun ChatKeyboardKey(
                 containerColor = icon_key_background_color,
                 contentColor = Color.Black
             )
-            buttonParams.width = dimensionResource(dimen._68sdp)
+            buttonParams.width = dimen_88dp
             ChatKeyboardKeyView(
                 keyboardKey = keyboardKey,
-                textSize = dimensionResource(com.intuit.ssp.R.dimen._12ssp).value.sp,
+                textSize = dimen_16sp,
                 color = colors,
                 buttonParams = buttonParams
             )
@@ -172,7 +168,7 @@ internal fun ChatKeyboardKey(
 
             ChatKeyboardKeyView(
                 keyboardKey = keyboardKey,
-                textSize = dimensionResource(com.intuit.ssp.R.dimen._19ssp).value.sp,
+                textSize = dimen_25sp,
                 color = ButtonDefaults.buttonColors(
                     containerColor = text_key_background_color,
                     contentColor = Color.Black
@@ -189,7 +185,7 @@ internal fun ChatKeyboardKey(
             buttonParams.modifier = modifier
             ChatKeyboardKeyView(
                 keyboardKey = keyboardKey,
-                textSize = dimensionResource(com.intuit.ssp.R.dimen._19ssp).value.sp,
+                textSize = dimen_25sp,
                 color = colors,
                 buttonParams = buttonParams
             )

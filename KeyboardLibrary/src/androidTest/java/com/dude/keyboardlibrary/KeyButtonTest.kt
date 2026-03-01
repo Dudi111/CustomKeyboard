@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTag
@@ -21,7 +20,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import com.dude.keyboardlibrary.data.model.ButtonParams
 import com.dude.keyboardlibrary.ui.keyboard.KeyButton
-import com.intuit.sdp.R.dimen
+import com.dude.keyboardlibrary.ui.theme.dimen_63dp
 
 @RunWith(AndroidJUnit4::class)
 class KeyButtonTest {
@@ -38,8 +37,8 @@ class KeyButtonTest {
             val modifier = Modifier
                 .focusable(interactionSource = interactionSource)
                 .padding(1.dp)
-                .height(dimensionResource(dimen._48sdp))
-                .width(dimensionResource(dimen._100sdp))
+                .height(dimen_63dp)
+                .width(130.dp)
                 .semantics { this.contentDescription = "test"; this.testTag = "test" }
 
             val buttonParams = ButtonParams(
@@ -61,8 +60,8 @@ class KeyButtonTest {
             val modifier = Modifier
                 .focusable(interactionSource = interactionSource)
                 .padding(1.dp)
-                .height(dimensionResource(dimen._48sdp))
-                .width(dimensionResource(dimen._100sdp))
+                .height(dimen_63dp)
+                .width(130.dp)
 
             val buttonParams = ButtonParams(
                 modifier,

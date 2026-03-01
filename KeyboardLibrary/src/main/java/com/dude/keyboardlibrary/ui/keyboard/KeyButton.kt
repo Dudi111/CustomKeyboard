@@ -12,14 +12,13 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.input.pointer.pointerInteropFilter
-import androidx.compose.ui.res.dimensionResource
 import kotlinx.coroutines.delay
 import com.dude.keyboardlibrary.data.Generated
 import com.dude.keyboardlibrary.data.model.ButtonParams
 import com.dude.keyboardlibrary.ui.theme.button_pressed_backgroundColor
 import com.dude.keyboardlibrary.ui.theme.content_padding_value
+import com.dude.keyboardlibrary.ui.theme.dimen_12dp
 import com.dude.keyboardlibrary.ui.theme.keyboard_background_color
-import com.intuit.sdp.R.dimen
 
 /**
  * KeyButton : This method create a keyboard button
@@ -87,7 +86,7 @@ internal fun KeyButton(
             modifier = Modifier
                 .padding(
                     buttonParams.contentPadding ?: PaddingValues(
-                        bottom = dimensionResource(dimen._9sdp),
+                        bottom = dimen_12dp,
                         start = content_padding_value,
                         end = content_padding_value
                     )

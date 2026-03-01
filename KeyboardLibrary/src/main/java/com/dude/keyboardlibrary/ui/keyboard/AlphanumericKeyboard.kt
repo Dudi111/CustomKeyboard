@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.unit.dp
 import com.dude.keyboardlibrary.data.Generated
 import com.dude.keyboardlibrary.data.KeysConstants.FIRST_ROW_ALPHANUMERIC_NUMBER
@@ -21,7 +20,6 @@ import com.dude.keyboardlibrary.data.KeysConstants.THIRD_ROW_ALPHANUMERIC_TEXT
 import com.dude.keyboardlibrary.data.KeysDataSource
 import com.dude.keyboardlibrary.data.model.*
 import com.dude.keyboardlibrary.ui.theme.*
-import com.intuit.sdp.R.dimen
 
 /**
  * AlphanumericKeyboard : This method create a keyboard view for alphanumeric keyboard
@@ -91,7 +89,7 @@ internal fun AlphanumericKeyboard(modifier: Modifier, keyActionHandler: KeyActio
         Column(
             modifier = Modifier
                 .padding(
-                    top = dimensionResource(dimen._6sdp),
+                    top = dimen_8dp,
                     start = default_padding_value,
                     end = default_padding_value
                 )

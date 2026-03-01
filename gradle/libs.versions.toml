@@ -7,7 +7,6 @@ sonarQube = "5.1.0.4882"
 jacoco = "0.8.12"
 androidLibrary = "8.6.1"
 compose = "1.7.4"
-sdp-ssp = "1.1.1"
 
 [libraries]
 ##UI
@@ -21,8 +20,6 @@ androidx-core = { module = "androidx.test:core", version.ref = "core" }
 junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiter" }
 androidx-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4", version.ref = "compose" }
 androidx-test-manifest =  { group = "androidx.compose.ui", name = "ui-test-manifest", version.ref = "compose" }
-sdp-android = { module ="com.intuit.sdp:sdp-android", version.ref = "sdp-ssp" }
-ssp-android = { module= "com.intuit.ssp:ssp-android", version.ref = "sdp-ssp" }
 
 ##jacoco
 org-jacoco-ant = { group = "org.jacoco",name = "org.jacoco.ant", version.ref = "jacoco"}

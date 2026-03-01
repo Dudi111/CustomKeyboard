@@ -16,13 +16,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.dude.keyboardlibrary.data.Generated
 import com.dude.keyboardlibrary.data.KeysConstants.FIRST_ROW_NUMERIC
 import com.dude.keyboardlibrary.data.KeysConstants.FOUR_ROW_NUMERIC
@@ -31,7 +29,6 @@ import com.dude.keyboardlibrary.data.KeysConstants.THIRD_ROW_NUMERIC
 import com.dude.keyboardlibrary.data.KeysDataSource
 import com.dude.keyboardlibrary.data.model.*
 import com.dude.keyboardlibrary.ui.theme.*
-import com.intuit.sdp.R.dimen
 
 /**
  * NumericKeyboardView : This method create a keyboard view for numeric keyboard
@@ -71,7 +68,7 @@ internal fun NumericKeyboardView(modifier: Modifier, keyActionHandler: KeyAction
         //this column is holder for keyboard rows
         Column(
             Modifier
-                .padding(top = dimensionResource(dimen._6sdp))
+                .padding(top = dimen_8dp)
                 .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
@@ -132,8 +129,8 @@ fun KeyboardKey(
         {},
         onClick = { onClick(keyboardKey) },
         enabled = true,
-        height = dimensionResource(dimen._48sdp),
-        contentPadding = PaddingValues(dimensionResource(dimen._3sdp))
+        height = dimen_63dp,
+        contentPadding = PaddingValues(dimen_4dp)
     )
     when (keyboardKey) {
         is UtilityKey.Backspace -> {
@@ -147,13 +144,13 @@ fun KeyboardKey(
                         ImageVector.vectorResource(id = keyboardKey.id),
                         contentDescription = keyboardKey.text,
                         modifier = Modifier
-                            .size(dimensionResource(dimen._18sdp))
+                            .size(dimen_23dp)
                             .align(Alignment.Center),
                         tint = Color.Black
                     )
                 },
                 isBackSpaceKey = true,
-                shape = RoundedCornerShape(dimensionResource(dimen._5sdp))
+                shape = RoundedCornerShape(dimen_6dp)
             )
         }
 
@@ -163,7 +160,7 @@ fun KeyboardKey(
             )
             KeyButton(
                 buttonParams = buttonParams, colors = colors, content = {},
-                shape = RoundedCornerShape(dimensionResource(dimen._5sdp))
+                shape = RoundedCornerShape(dimen_6dp)
             )
         }
 
@@ -178,7 +175,7 @@ fun KeyboardKey(
                     Text(
                         text = keyboardKey.text,
                         style = TextStyle(
-                            fontSize = dimensionResource(com.intuit.ssp.R.dimen._23ssp).value.sp,
+                            fontSize = dimen_30sp,
                             fontFamily = FontFamily.Default,
                             fontWeight = FontWeight.Normal
                         ),
@@ -186,7 +183,7 @@ fun KeyboardKey(
                         color = Color.Black
                     )
                 },
-                shape = RoundedCornerShape(dimensionResource(dimen._5sdp))
+                shape = RoundedCornerShape(dimen_6dp)
             )
         }
     }

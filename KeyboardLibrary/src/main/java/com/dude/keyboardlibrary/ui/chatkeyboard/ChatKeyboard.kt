@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import com.dude.keyboardlibrary.data.Generated
@@ -23,8 +22,6 @@ import com.dude.keyboardlibrary.data.model.*
 import com.dude.keyboardlibrary.ui.keyboard.KeyActionHandler
 import com.dude.keyboardlibrary.ui.keyboard.KeyActionHandler.Companion.chatKeyboardVisible
 import com.dude.keyboardlibrary.ui.theme.*
-import com.intuit.sdp.R.dimen
-
 
 /**
  * ChatKeyboardView : This method create chat keyboard, it will called from other app
@@ -141,7 +138,7 @@ fun ChatKeyboard(
         //This Box is most parent layout of chat keyboard
         Box(
             modifier = modifier
-                .height(dimensionResource(dimen._189sdp))
+                .height(dimen_245dp)
                 .fillMaxWidth(),
         ) {
             //This column is holder for keyboard rows
@@ -152,8 +149,8 @@ fun ChatKeyboard(
                     .wrapContentHeight()
                     .background(color = keyboard_background_color)
                     .padding(
-                        top = dimensionResource(dimen._15sdp),
-                        bottom = dimensionResource(dimen._5sdp),
+                        top = dimen_20dp,
+                        bottom = dimen_6dp,
                         start = default_padding_value,
                         end = default_padding_value
                     ),

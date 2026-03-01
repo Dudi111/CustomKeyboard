@@ -13,10 +13,8 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.res.dimensionResource
 import com.dude.keyboardlibrary.data.model.ButtonParams
 import com.dude.keyboardlibrary.ui.theme.*
-import com.intuit.sdp.R.dimen
 
 /**
  * KeyButtonLongClick : This method is for key's long press action
@@ -63,7 +61,7 @@ internal fun KeyButtonLongClick(
         Box(
             modifier = Modifier
                 .padding(
-                    bottom = dimensionResource(dimen._9sdp),
+                    bottom = dimen_12dp,
                     start = content_padding_value,
                     end = content_padding_value
                 )

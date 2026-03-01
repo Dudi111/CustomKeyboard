@@ -6,13 +6,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.dimensionResource
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.dude.keyboardlibrary.data.Generated
 import com.dude.keyboardlibrary.data.model.*
 import com.dude.keyboardlibrary.ui.theme.*
-import com.intuit.sdp.R.dimen
 
 /**
  * AlphabetKeyboardKey : This method is used for calling keyboard view method based on different ui properties
@@ -35,7 +31,7 @@ internal fun AlphabetKeyboardKey(
         onLongClick = {},
         onClick = { onClick(keyboardKey) },
         enabled = true,
-        height = dimensionResource(dimen._42sdp)
+        height = dimen_55dp
     )
     when (keyboardKey) {
         is UtilityKey.UppercaseLong -> {
@@ -43,11 +39,11 @@ internal fun AlphabetKeyboardKey(
                 containerColor = icon_key_background_color,
                 contentColor = action_key_background_color
             )
-            buttonParams.width = dimensionResource(dimen._41sdp)
+            buttonParams.width = dimen_53dp
             KeyView(
                 keyboardKey = keyboardKey,
                 color = colors,
-                iconSize = dimensionResource(dimen._15sdp),
+                iconSize = dimen_20dp,
                 buttonParams = buttonParams
             )
         }
@@ -64,11 +60,11 @@ internal fun AlphabetKeyboardKey(
                     contentColor = Color.Black
                 )
             } else {
-                buttonParams.width = dimensionResource(dimen._68sdp)
+                buttonParams.width = dimen_88dp
             }
             KeyView(
                 keyboardKey = keyboardKey,
-                textSize = dimensionResource(com.intuit.ssp.R.dimen._19ssp).value.sp,
+                textSize = dimen_25sp,
                 color = colors,
                 buttonParams = buttonParams
             )
@@ -81,18 +77,18 @@ internal fun AlphabetKeyboardKey(
             )
             if (isNumeric) {
                 buttonParams.contentPadding = PaddingValues(
-                    start = dimensionResource(dimen._11sdp),
-                    bottom = dimensionResource(dimen._9sdp),
-                    end = 2.dp
+                    start = dimen_14dp,
+                    bottom = dimen_12dp,
+                    end = content_padding_value
                 )
                 buttonParams.modifier = modifier
             } else {
-                buttonParams.width = dimensionResource(dimen._41sdp)
+                buttonParams.width = dimen_53dp
             }
             KeyView(
                 keyboardKey = keyboardKey,
                 color = colors,
-                iconSize = dimensionResource(dimen._15sdp),
+                iconSize = dimen_20dp,
                 buttonParams = buttonParams
             )
         }
@@ -104,14 +100,14 @@ internal fun AlphabetKeyboardKey(
             )
             buttonParams.modifier = modifier
             buttonParams.contentPadding = PaddingValues(
-                end = dimensionResource(dimen._11sdp),
-                start = 2.dp,
-                bottom = dimensionResource(dimen._9sdp)
+                end = dimen_14dp,
+                start = content_padding_value,
+                bottom = dimen_12dp
             )
             KeyView(
                 keyboardKey = keyboardKey,
                 color = colors,
-                iconSize = dimensionResource(dimen._15sdp),
+                iconSize = dimen_20dp,
                 buttonParams = buttonParams
             )
         }
@@ -124,7 +120,7 @@ internal fun AlphabetKeyboardKey(
             buttonParams.modifier = modifier
             KeyView(
                 keyboardKey = keyboardKey,
-                textSize = dimensionResource(com.intuit.ssp.R.dimen._12ssp).value.sp,
+                textSize = dimen_16sp,
                 color = colors,
                 buttonParams = buttonParams
             )
@@ -135,10 +131,10 @@ internal fun AlphabetKeyboardKey(
                 containerColor = icon_key_background_color,
                 contentColor = Color.Black
             )
-            buttonParams.width = dimensionResource(dimen._68sdp)
+            buttonParams.width = dimen_88dp
             KeyView(
                 keyboardKey = keyboardKey,
-                textSize = dimensionResource(com.intuit.ssp.R.dimen._12ssp).value.sp,
+                textSize = dimen_16sp,
                 color = colors,
                 buttonParams = buttonParams
             )
@@ -149,10 +145,10 @@ internal fun AlphabetKeyboardKey(
                 containerColor = text_key_background_color,
                 contentColor = Color.Black
             )
-            buttonParams.width = dimensionResource(dimen._40sdp)
+            buttonParams.width = dimen_52dp
             KeyView(
                 keyboardKey = keyboardKey,
-                textSize = dimensionResource(com.intuit.ssp.R.dimen._19ssp).value.sp,
+                textSize = dimen_25sp,
                 color = colors,
                 buttonParams = buttonParams
             )
@@ -161,7 +157,7 @@ internal fun AlphabetKeyboardKey(
         is Alphabets.A, Alphabets.L, UppercaseAlphabets.A, UppercaseAlphabets.L -> {
             KeyView(
                 keyboardKey = keyboardKey,
-                textSize = dimensionResource(com.intuit.ssp.R.dimen._19ssp).value.sp,
+                textSize = dimen_25sp,
                 color = ButtonDefaults.buttonColors(
                     containerColor = text_key_background_color,
                     contentColor = Color.Black
@@ -178,7 +174,7 @@ internal fun AlphabetKeyboardKey(
             buttonParams.modifier = modifier
             KeyView(
                 keyboardKey = keyboardKey,
-                textSize = dimensionResource(com.intuit.ssp.R.dimen._19ssp).value.sp,
+                textSize = dimen_25sp,
                 color = colors,
                 buttonParams = buttonParams
             )

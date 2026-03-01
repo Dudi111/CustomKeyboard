@@ -3,11 +3,12 @@ package com.dude.keyboardlibrary.data.model
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.dude.keyboardlibrary.ui.theme.content_padding_value
-import com.intuit.sdp.R.dimen
+import com.dude.keyboardlibrary.ui.theme.dimen_12dp
+import com.dude.keyboardlibrary.ui.theme.dimen_16dp
+import com.dude.keyboardlibrary.ui.theme.dimen_55dp
 
 internal data class ButtonParams(
     var modifier: Modifier = Modifier,
@@ -29,18 +30,18 @@ internal fun getPaddingParamsOfSecondRow(
     buttonParams: ButtonParams,
     keyboardKey: Key
 ): ButtonParams {
-    buttonParams.width = dimensionResource(dimen._42sdp)
+    buttonParams.width = dimen_55dp
     if (keyboardKey is Alphabets.A || keyboardKey is UppercaseAlphabets.A) {
         buttonParams.contentPadding = PaddingValues(
-            bottom = dimensionResource(dimen._9sdp),
-            start = dimensionResource(dimen._12sdp),
+            bottom = dimen_12dp,
+            start = dimen_16dp,
             end = content_padding_value
         )
     } else {
         buttonParams.contentPadding = PaddingValues(
-            bottom = dimensionResource(dimen._9sdp),
+            bottom = dimen_12dp,
             start = content_padding_value,
-            end = dimensionResource(dimen._12sdp)
+            end = dimen_16dp
         )
     }
     return buttonParams
