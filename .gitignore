@@ -1,6 +1,3 @@
-#Use this below command to remove the file from the repository
-#git rm -r -f --cached local.properties
-#git commit -m "Remove local.properties"
 
 # Generated files
 bin/

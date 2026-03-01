@@ -27,14 +27,38 @@ Built entirely with Jetpack Compose.
 
 ---
 
-# 📦 Installation
+# 📦 Installation (via JitPack)
 
-Add dependency in your app-level `build.gradle(.kts)`:
+---
+
+## Step 1️⃣ Add JitPack Repository
+
+In your **`settings.gradle.kts`**:
 
 ```kotlin
-dependencies {
-    api("dude.keyboard:keyboardLibrary:1.0.0")
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven(url = "https://jitpack.io")
+    }
 }
+```
+
+---
+
+## Step 2️⃣ Add Dependency
+
+In your app-level `build.gradle`:
+
+```groovy
+implementation 'com.github.Dudi111:CustomKeyboard:1.0.1'
+```
+
+Or in Kotlin DSL:
+
+```kotlin
+implementation("com.github.Dudi111:CustomKeyboard:1.0.1")
 ```
 
 Sync your project.
@@ -149,7 +173,6 @@ TextField(
     onValueChange = {
         number.value = it
     },
-    readOnly = true, // Prevent system keyboard
     modifier = Modifier.onFocusChanged {
         if (it.isFocused) {
             KeyboardOption.apply {
@@ -206,9 +229,9 @@ KeyActionHandler.chatKeyboardVisible.value = false  // Hide
 
 ---
 
-# ⚠️ Important
+# ⚠️ Important – Prevent System Keyboard
 
-To prevent Android system keyboard from appearing:
+To prevent the Android system keyboard from appearing:
 
 ```kotlin
 val keyboardController = LocalSoftwareKeyboardController.current
@@ -223,13 +246,15 @@ TextField(
             if (it.isFocused) {
                 focusRequester.requestFocus()
                 keyboardController?.hide() // Hide system keyboard
-            } 
+            }
         }
 )
 ```
 
+---
+
 # 📄 Version
 
-Current Version: `1.0.0`
+Current Version: `1.0.1`
 
 ---
