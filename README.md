@@ -258,3 +258,14 @@ TextField(
 Current Version: `1.0.1`
 
 ---
+
+# 📸 Keyboard UI
+
+<div style="display: flex; justify-content: center; gap: 12px; flex-wrap: nowrap;">
+  <img src="images/Alphanumeric%20keyboard.png" width="220" alt="Alphanumeric Keyboard"/>
+  <img src="images/Chat%20keyboard.png" width="220" alt="Chat Keyboard"/>
+  <img src="images/keyboard%20back.png" width="220" alt="Keyboard Background"/>
+  <img src="images/Numeric%20keyboard.png" width="220" alt="Numeric Keyboard"/>
+</div>
+
+---
